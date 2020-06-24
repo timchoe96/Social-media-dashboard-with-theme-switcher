@@ -1,0 +1,49 @@
+
+.ocard{
+    
+    height:120px;
+    
+    border-radius:5px;
+   font-family:'Inter';
+   display:flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+    .firstRow{
+        padding:0 25px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family:'Inter';
+        font-weight:700;
+        img{
+            height:20px;
+        }
+        p{
+        font-size:14px;
+        }
+    }
+    .secondRow{
+        padding:0 25px;
+        height:40px;
+        display:flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        h1{
+            margin-left:0;
+            font-size:30px;
+        }
+        .percent{
+            align-items: center;
+            display:flex;
+            img{
+                height:5px;
+            }
+            p{
+                margin-left:5px;
+                font-size:12px;
+            }
+        }
+        
+    }
+}
+

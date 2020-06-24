@@ -1,0 +1,29 @@
+.overview{
+.title{
+    font-family:'Inter';
+    margin-left:150px;
+    margin-top:50px;
+    font-size:25px;
+}
+.overviewGrid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,250px);
+    grid-template-rows: repeat(auto-fit,120px);
+    justify-content: center;
+    grid-column-gap:48px;
+    grid-row-gap:30px;
+    margin-top:30px;
+}
+}
+
+@media only screen and (max-width:375px){
+    .overview{
+    .overviewGrid{
+        grid-template-columns:repeat(auto-fit,320px);
+        grid-row-gap:20px;
+    }
+    .title{
+        margin-left:25px;
+     }
+    }
+}

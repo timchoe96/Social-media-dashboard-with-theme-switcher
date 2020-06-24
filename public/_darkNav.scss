@@ -1,0 +1,86 @@
+$bgdark: hsl(230, 17%, 14%);
+$topbgdark: hsl(232, 19%, 15%);
+$carddark: hsl(228, 28%, 20%);
+$textdark: hsl(228, 34%, 66%);
+$whitetext: hsl(0, 0%, 100%);
+$dark: linear-gradient(-90deg,hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+
+@mixin Font($weight){
+    font-family:'Inter',sans-serif;
+    font-weight:$weight;
+    }
+
+
+.backgroundDark{
+    background:$bgdark;
+    height:100vh;
+    .darkNav{
+        padding:30px 150px;
+        background:$topbgdark;
+        @include Font(700);
+        display:flex;
+        flex-wrap:wrap;
+        height:30vh;
+        justify-content: space-between;
+        .headingDark{
+            padding-bottom:5px;
+            font-size:30px;
+            color:white;
+        }
+        .paragraphDark{
+          color:$textdark;
+          margin-right:20px;
+        }
+        .rightNav{
+            height:30px;
+            display:flex;
+            align-items: center;
+            .rightParagraphDark{
+                color:white;
+                margin-right:20px;
+                }
+            .switchDark{
+                width:40px;
+                height:20px;
+                background:$dark;
+                border-radius:15px;
+                padding:2px 3px;
+                
+                .innerCircleDark{
+                margin-left: auto;
+                width:15px;
+                height:15px;
+                background:$bgdark;
+                border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width:375px){
+    .backgroundDark{
+        height:100%;
+        padding-bottom: 50px;
+        .darkNav{
+            background:none;
+            padding:50px 30px; 
+            .headingDark{
+                font-size:25px;
+            }
+            .paragraphDark{
+                font-size:15px;
+              }
+              .rightNav{
+                border-top:1px solid white;
+                padding-top:20px;
+                align-items: center;
+                width:100vw;
+                justify-content: space-between;
+                .rightParagraphDark{
+                   font-size:14px;
+                    }
+                }
+        }
+    }
+    }

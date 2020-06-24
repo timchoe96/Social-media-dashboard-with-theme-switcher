@@ -1,0 +1,117 @@
+$facebook:hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(-90deg,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+// dark toggle background
+
+// light toggle background 
+
+$light: hsl(230, 22%, 74%);
+
+
+// light theme 
+
+// background
+$bglight: hsl(0, 0%, 100%);
+// top bg pattern
+$topbglight: hsl(225, 100%, 98%);
+// card bg
+$cardlight: hsl(227, 47%, 96%);
+
+
+// text
+$textlight: hsl(228, 12%, 44%);
+// dark text
+$darktext: hsl(230, 17%, 14%);
+
+@mixin Font($weight){
+font-family:'Inter',sans-serif;
+font-weight:$weight;
+}
+
+
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+
+.backgroundLight{
+    height:100vh;
+    background:$bglight;
+   
+    .lightNav{
+        padding:30px 150px;
+        background:$topbglight;
+        @include Font(700);
+        display:flex;
+        flex-wrap:wrap;
+        height:30vh;
+        justify-content: space-between;
+        .headingLight{
+            padding-bottom:5px;
+            font-size:30px;
+        }
+        .paragraphLight{
+          color:$textlight;
+          margin-right:20px;
+        }
+        .rightNav{
+            height:30px;
+            display:flex;
+            align-items: center;
+            .rightParagraphLight{
+            color:$textlight;
+            margin-right:20px;
+            }
+            .switchLight{
+                width:40px;
+                height:20px;
+                background:$light;
+                border-radius:15px;
+                padding:2px 3px;
+               
+                .innerCircleLight{
+                width:15px;
+                height:15px;
+                background:white;
+                border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width:375px){
+.backgroundLight{
+    height:100%;
+    padding-bottom: 50px;
+    .lightNav{
+        background:none;
+        padding:50px 30px; 
+        .leftNav{
+            height:50px;
+            .headingLight{
+                font-size:25px;
+            }
+            .paragraphLight{
+                font-size:15px;
+              }
+            }
+          .rightNav{
+            border-top:1px solid $textlight;
+            padding-top:20px;
+            align-items: center;
+            width:100vw;
+            justify-content: space-between;
+            .rightParagraphLight{
+               font-size:14px;
+                }
+            }
+    }
+}
+}

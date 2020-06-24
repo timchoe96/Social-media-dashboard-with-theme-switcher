@@ -1,0 +1,56 @@
+$facebook:hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$instagram: linear-gradient(-90deg,hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+$youTube: hsl(348, 97%, 39%);
+
+@mixin flex($direction,$align){
+    display:flex;
+    flex-direction: $direction;
+    justify-content: $align;
+    align-items: center;
+}
+
+
+.FCard{
+    height:200px;
+    border-radius:5px;
+}
+
+
+.borderCard{
+    font-family: 'Inter';
+    height:200px;
+    border-radius:5px;
+    margin-top:3px;
+    
+    @include flex(column,space-evenly);
+    .smallLogo{
+        display:flex;
+        align-items: center;
+        p{
+        font-size:12px; 
+        font-weight:700;
+        margin-left:5px;
+        }
+    }
+    .followCount{
+        font-size:50px;
+        font-weight: 700;
+        margin-bottom:-20px;
+    }
+    .type{
+        font-size:12px;
+    }
+    .direction{
+        display:flex;
+        align-items: center;
+        p{
+            margin-left: 5px;
+            font-weight: 700;
+            font-size:12px;
+        }
+        img{
+            height:5px;
+        }
+    }
+}
